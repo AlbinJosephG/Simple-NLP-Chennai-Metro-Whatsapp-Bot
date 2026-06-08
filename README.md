@@ -26,3 +26,44 @@
 
 </div>
 
+<br/>
+
+[**✦ Features**](#-features) ·
+[**✦ Architecture**](#️-architecture) ·
+[**✦ Quick Start**](#-quick-start) ·
+[**✦ Twilio Setup**](#-twilio-whatsapp-setup) ·
+[**✦ API Docs**](#-api-reference)
+
+</div>
+
+---
+
+## ✨ Features
+
+### Transit Information Services
+
+| Service | Description |
+|----------|------------|
+| Route Planning | Calculates metro routes between Chennai Metro stations and provides route summaries with line information, interchanges, travel time, fare, and distance. |
+| Fare Calculation | Provides fare estimates between source and destination stations along with stop count and travel distance. |
+| Travel Time Estimation | Calculates approximate journey duration using predefined metro route data. |
+| Train Timings | Returns first and last train timings for supported Chennai Metro stations. |
+
+---
+
+### Conversational Interface
+
+| Capability | Description |
+|------------|------------|
+| Menu-Based Navigation | Guided WhatsApp interaction through numbered menu options. |
+| Natural Language Queries | Supports direct requests without requiring menu navigation. |
+| Session Management | Maintains user context during multi-step interactions. |
+| Error Recovery | Allows users to return to previous steps or the main menu. |
+
+### Station Recognition Engine
+
+| Capability | Description |
+|------------|------------|
+| Fuzzy Matching | Handles common spelling mistakes in station names |
+| Station Normalization |	Maps user input to valid station names |
+| Suggestion Handling |	Improves route discovery even with incorrect input |
