@@ -26,16 +26,6 @@
 
 </div>
 
-<br/>
-
-[**✦ Features**](#-features) ·
-[**✦ Architecture**](#️-architecture) ·
-[**✦ Quick Start**](#-quick-start) ·
-[**✦ Twilio Setup**](#-twilio-whatsapp-setup) ·
-[**✦ API Docs**](#-api-reference)
-
-</div>
-
 ---
 
 ## ✨ Features
