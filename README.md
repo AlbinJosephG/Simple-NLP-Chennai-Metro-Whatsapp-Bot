@@ -157,3 +157,220 @@ aegmoore     → Egmore
 
 ---
 
+## 🚀 Quick Start
+
+### Prerequisites
+
+```bash
+node >= 18
+npm  >= 9
+```
+
+You'll also need:
+
+- Twilio Account
+- Twilio WhatsApp Sandbox
+- ngrok
+- Git
+
+<br/>
+
+### 1 — Clone
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Simple-NLP-Chennai-Metro-Whatsapp-Bot.git
+cd Simple-NLP-Chennai-Metro-Whatsapp-Bot
+```
+
+<br/>
+
+### 2 — Install Dependencies
+
+```bash
+npm install
+```
+
+<br/>
+
+### 3 — Configure Environment
+
+Create `.env`:
+
+```env
+PORT=5000
+```
+
+<br/>
+
+### 4 — Start Application
+
+```bash
+npm start
+
+# ✓ Server running on http://localhost:5000
+```
+
+<br/>
+
+### 5 — Start ngrok
+
+```bash
+ngrok http 5000
+```
+
+Example:
+
+```text
+https://abcd-1234.ngrok-free.app
+```
+
+<br/>
+
+> Application running? Continue to Twilio setup below.
+
+<br/>
+
+---
+
+## 📡 API Reference
+
+<br/>
+
+### Route Services
+
+```text
+POST  /chat                      → Route Planning
+POST  /chat                      → Fare Calculation
+POST  /chat                      → Travel Time Estimation
+POST  /chat                      → Train Timings
+```
+
+### WhatsApp Integration
+
+```text
+POST  /whatsapp                  → Twilio WhatsApp Webhook
+```
+
+### Sample Queries
+
+```text
+Airport to Vadapalani
+
+Fare from Airport to Vadapalani
+
+Time from Airport to Vadapalani
+
+Timings Airport
+```
+
+<br/>
+
+---
+
+## 🛠 Tech Stack
+
+<br/>
+
+<div align="center">
+
+**Messaging Platform**
+
+Twilio WhatsApp Sandbox
+
+**Backend**
+
+Node.js • Express.js
+
+**Development Tools**
+
+ngrok • Git • GitHub
+
+**Core Components**
+
+Route Engine • Chat Parser • Session Manager • Metro Dataset
+
+</div>
+
+<br/>
+
+---
+
+## 📂 Project Structure
+
+```text
+Simple-NLP-Chennai-Metro-Whatsapp-Bot/
+│
+├── data/
+│   ├── stations.js
+│   └── timings.js
+│
+├── services/
+│   ├── routeFinder.js
+│   ├── chatParser.js
+│   ├── stationHelper.js
+│   └── sessionManager.js
+│
+├── server.js
+├── package.json
+├── .env
+└── README.md
+```
+
+<br/>
+
+---
+
+## 📱 Twilio WhatsApp Setup
+
+### 1 — Create Twilio Account
+
+Create a free Twilio account and activate the WhatsApp Sandbox.
+
+<br/>
+
+### 2 — Configure Webhook
+
+Start ngrok and copy your public URL.
+
+Set:
+
+```text
+https://YOUR-NGROK-URL.ngrok-free.app/whatsapp
+```
+
+Method:
+
+```text
+POST
+```
+
+<br/>
+
+### 3 — Join Sandbox
+
+Send the Twilio-provided join code to:
+
+```text
++1 415 523 8886
+```
+
+<br/>
+
+### 4 — Test
+
+Send:
+
+```text
+hi
+```
+
+Expected:
+
+```text
+Chennai Metro Bot
+
+1. Find Route
+2. Check Fare
+3. Travel Time
+4. First & Last Train
+```
