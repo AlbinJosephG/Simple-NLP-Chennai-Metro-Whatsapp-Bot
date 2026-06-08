@@ -54,13 +54,13 @@
   └────────────────────────────────────────────────────┘
 ```
 
-◆ Supports menu-based navigation
+➤ Supports menu-based navigation
 
-◆ Supports natural language queries
+➤ Supports natural language queries
 
-◆ Session-aware conversations
+➤ Session-aware conversations
 
-◆ Back and Main Menu navigation
+➤ Back and Main Menu navigation
 
 <br/>
 
