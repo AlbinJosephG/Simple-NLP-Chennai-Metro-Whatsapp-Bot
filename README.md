@@ -49,8 +49,6 @@
 | Travel Time Estimation | Calculates approximate journey duration using predefined metro route data. |
 | Train Timings | Returns first and last train timings for supported Chennai Metro stations. |
 
----
-
 ### Conversational Interface
 
 | Capability | Description |
@@ -67,3 +65,14 @@
 | Fuzzy Matching | Handles common spelling mistakes in station names |
 | Station Normalization |	Maps user input to valid station names |
 | Suggestion Handling |	Improves route discovery even with incorrect input |
+
+### WhatsApp Navigation
+
+> 1. Find Route
+> 2. Check Fare
+> 3. Travel Time
+> 4. First & Last Train
+
+
+
+
