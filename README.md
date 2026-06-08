@@ -40,39 +40,128 @@
 
 ## ✨ Features
 
-### Transit Information Services
+<br/>
 
-| Service | Description |
-|----------|------------|
-| Route Planning | Calculates metro routes between Chennai Metro stations and provides route summaries with line information, interchanges, travel time, fare, and distance. |
-| Fare Calculation | Provides fare estimates between source and destination stations along with stop count and travel distance. |
-| Travel Time Estimation | Calculates approximate journey duration using predefined metro route data. |
-| Train Timings | Returns first and last train timings for supported Chennai Metro stations. |
-
-### Conversational Interface
+### 🚇  Route Planning Engine
 
 | Capability | Description |
-|------------|------------|
-| Menu-Based Navigation | Guided WhatsApp interaction through numbered menu options. |
-| Natural Language Queries | Supports direct requests without requiring menu navigation. |
-| Session Management | Maintains user context during multi-step interactions. |
-| Error Recovery | Allows users to return to previous steps or the main menu. |
+|---|---|
+| Route Calculation | Calculates routes between Chennai Metro stations |
+| Interchange Detection | Identifies line changes automatically |
+| Distance Estimation | Calculates approximate travel distance |
+| Travel Time Calculation | Estimates journey duration |
+| Fare Calculation | Returns fare information for the selected route |
 
-### Station Recognition Engine
+<br/>
+
+### 💬  Conversational Interface
+
+```text
+  ┌────────────────────────────────────────────────────┐
+  │  USER MESSAGE  →  Intent Detection                 │
+  │  Intent        →  Route / Fare / Time / Timings    │
+  │  Response      →  WhatsApp Reply                   │
+  └────────────────────────────────────────────────────┘
+```
+
+◆ Supports menu-based navigation
+
+◆ Supports natural language queries
+
+◆ Session-aware conversations
+
+◆ Back and Main Menu navigation
+
+<br/>
+
+### 🧠  Station Recognition System
 
 | Capability | Description |
-|------------|------------|
-| Fuzzy Matching | Handles common spelling mistakes in station names |
-| Station Normalization |	Maps user input to valid station names |
-| Suggestion Handling |	Improves route discovery even with incorrect input |
+|---|---|
+| Fuzzy Matching | Handles spelling mistakes in station names |
+| Station Normalization | Converts user input into valid stations |
+| Error Handling | Prevents failed searches due to typos |
+| Query Recovery | Allows route lookup even with incorrect spellings |
 
-### WhatsApp Navigation
+Examples:
 
-> 1. Find Route
-> 2. Check Fare
-> 3. Travel Time
-> 4. First & Last Train
+```text
+airpolt      → Airport
+vaadapalani  → Vadapalani
+centrall     → MGR Central
+aegmoore     → Egmore
+```
 
+<br/>
 
+### 📱  WhatsApp Experience
 
+| Feature | Description |
+|---|---|
+| Menu Navigation | Guided interaction using numbered options |
+| Direct Queries | Supports free-text metro requests |
+| Main Menu Access | Return to home using `0` |
+| Back Navigation | Return to previous step using `9` |
+| Twilio Integration | WhatsApp messaging through Twilio Sandbox |
+
+<br/>
+
+### 🚆  Metro Information Services
+
+| Service | Output |
+|---|---|
+| Route Finder | Route, Stops, Distance, Interchanges |
+| Fare Calculator | Fare, Stops, Distance |
+| Travel Time | Estimated Journey Duration |
+| Train Timings | First Train, Last Train |
+
+---
+
+## 🏗️ Architecture
+
+<br/>
+
+```text
+╔══════════════════════════════════════════════════════╗
+║                    USER LAYER                        ║
+║                WhatsApp Application                  ║
+╚═══════════════════════╤══════════════════════════════╝
+                        │
+                        ▼
+╔══════════════════════════════════════════════════════╗
+║              TWILIO WHATSAPP SANDBOX                ║
+║         Messaging Gateway & Webhook Layer           ║
+╚═══════════════════════╤══════════════════════════════╝
+                        │
+                        ▼
+╔══════════════════════════════════════════════════════╗
+║                EXPRESS.JS BACKEND                   ║
+║         Routing · Sessions · Processing             ║
+╚══════╤══════════════╤══════════════╤════════════════╝
+       │              │              │
+       ▼              ▼              ▼
+┌────────────┐ ┌────────────┐ ┌────────────┐
+│ Route      │ │ Chat       │ │ Session    │
+│ Engine     │ │ Parser     │ │ Manager    │
+└─────┬──────┘ └────────────┘ └────────────┘
+      │
+      ▼
+┌────────────────────────────────────────────┐
+│         Chennai Metro Dataset              │
+│ Stations · Routes · Fares · Timings        │
+└────────────────────────────────────────────┘
+```
+
+<br/>
+
+### Service Map
+
+| Service | Stack | Responsibility |
+|---|---|---|
+| WhatsApp Interface | Twilio Sandbox | Message delivery |
+| Backend Server | Node.js + Express | Routing & processing |
+| Route Engine | JavaScript | Route calculations |
+| Chat Parser | NLP Rules | Intent detection |
+| Session Manager | In-Memory Storage | Conversation tracking |
+| Metro Dataset | JSON | Stations, routes, fares, timings |
 
