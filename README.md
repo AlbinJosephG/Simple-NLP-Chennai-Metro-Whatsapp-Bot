@@ -232,94 +232,6 @@ https://abcd-1234.ngrok-free.app
 
 ---
 
-## 📡 API Reference
-
-<br/>
-
-### Route Services
-
-```text
-POST  /chat                      → Route Planning
-POST  /chat                      → Fare Calculation
-POST  /chat                      → Travel Time Estimation
-POST  /chat                      → Train Timings
-```
-
-### WhatsApp Integration
-
-```text
-POST  /whatsapp                  → Twilio WhatsApp Webhook
-```
-
-### Sample Queries
-
-```text
-Airport to Vadapalani
-
-Fare from Airport to Vadapalani
-
-Time from Airport to Vadapalani
-
-Timings Airport
-```
-
-<br/>
-
----
-
-## 🛠 Tech Stack
-
-<br/>
-
-<div align="center">
-
-**Messaging Platform**
-
-Twilio WhatsApp Sandbox
-
-**Backend**
-
-Node.js • Express.js
-
-**Development Tools**
-
-ngrok • Git • GitHub
-
-**Core Components**
-
-Route Engine • Chat Parser • Session Manager • Metro Dataset
-
-</div>
-
-<br/>
-
----
-
-## 📂 Project Structure
-
-```text
-Simple-NLP-Chennai-Metro-Whatsapp-Bot/
-│
-├── data/
-│   ├── stations.js
-│   └── timings.js
-│
-├── services/
-│   ├── routeFinder.js
-│   ├── chatParser.js
-│   ├── stationHelper.js
-│   └── sessionManager.js
-│
-├── server.js
-├── package.json
-├── .env
-└── README.md
-```
-
-<br/>
-
----
-
 ## 📱 Twilio WhatsApp Setup
 
 ### 1 — Create Twilio Account
@@ -374,3 +286,97 @@ Chennai Metro Bot
 3. Travel Time
 4. First & Last Train
 ```
+---
+
+## 📡 API Reference
+
+<br/>
+
+### Route Services
+
+```text
+POST  /chat                      → Route Planning
+POST  /chat                      → Fare Calculation
+POST  /chat                      → Travel Time Estimation
+POST  /chat                      → Train Timings
+```
+
+### WhatsApp Integration
+
+```text
+POST  /whatsapp                  → Twilio WhatsApp Webhook
+```
+
+### Sample Queries
+
+```text
+Airport to Vadapalani
+
+Fare from Airport to Vadapalani
+
+Time from Airport to Vadapalani
+
+Timings Airport
+```
+
+<br/>
+
+---
+
+## 🛠 Tech Stack
+
+<br/>
+
+<div align="center">
+
+### Messaging Platform
+
+![Twilio](https://img.shields.io/badge/Twilio-WhatsApp-F22F46?style=flat-square&logo=twilio&logoColor=white)
+
+### Backend
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)
+
+### Development & Deployment
+
+![ngrok](https://img.shields.io/badge/ngrok-1F1E37?style=flat-square)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+
+### Core Modules
+
+![Route Engine](https://img.shields.io/badge/Route-Engine-2563EB?style=flat-square)
+![Chat Parser](https://img.shields.io/badge/Chat-Parser-7C3AED?style=flat-square)
+![Session Manager](https://img.shields.io/badge/Session-Manager-059669?style=flat-square)
+![Metro Dataset](https://img.shields.io/badge/Metro-Dataset-D97706?style=flat-square)
+
+</div>
+
+<br/>
+
+---
+
+## 📂 Project Structure
+
+```text
+Simple-NLP-Chennai-Metro-Whatsapp-Bot/
+│
+├── data/
+│   ├── stations.js
+│   └── timings.js
+│
+├── services/
+│   ├── routeFinder.js
+│   ├── chatParser.js
+│   ├── stationHelper.js
+│   └── sessionManager.js
+│
+├── server.js
+├── package.json
+├── .env
+└── README.md
+```
+
+<br/>
+
