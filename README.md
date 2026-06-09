@@ -380,3 +380,7 @@ Simple-NLP-Chennai-Metro-Whatsapp-Bot/
 
 <br/>
 
+<img width="1133" height="408" alt="image" src="https://github.com/user-attachments/assets/03cd7d4b-f540-48dc-aa40-a2322bedcc59" />
+<img width="1153" height="417" alt="image" src="https://github.com/user-attachments/assets/287e210e-1536-45df-a29d-ba7b31f8ed4c" />
+<img width="376" height="678" alt="image" src="https://github.com/user-attachments/assets/092eb3d0-85d3-45e3-a171-a85dae6c0996" />
+
